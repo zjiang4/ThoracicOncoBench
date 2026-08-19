@@ -1,96 +1,38 @@
 # ThoracicOncoBench
 
-A benchmark for evaluating large language models on longitudinal thoracic oncologic imaging report interpretation.
+ThoracicOncoBench is a clinically anchored benchmark for evaluating large language models on longitudinal thoracic-oncology CT-report interpretation.
 
-## Overview
+## What Is Included
 
-ThoracicOncoBench is a pathology-anchored benchmark constructed from 17,355 consecutive chest CT reports (9,334 patients, 2015–2024) at a National Cancer Center, linked to a prospectively maintained oncology outcomes registry with surgical pathology and survival data. It evaluates 15 large language models across four task families using hospital-validated reference standards — no additional annotation required.
+- `data/benchmark_sample_en.jsonl`: small English-format example for reproducing the input/output schema.
+- `scorer/scorer.py`: frozen scoring implementation used for the released benchmark outputs.
+- `results/`: aggregate model-level results for the 0820 analysis package.
+- `figures/`: five figures regenerated from the 0820 files with intention-to-evaluate scoring.
+- `docs/0820_reproducibility.md`: task definitions, reference-standard provenance, scoring rules, and limitations.
+- `examples/infer_example.py`: minimal inference example.
 
-## Key Findings
+The complete manuscript is intentionally not stored in this repository. This repository contains the essential project assets needed to understand, reproduce, and audit the benchmark.
 
-- All 15 models missed **27%–49%** of true disease progressions
-- T-category staging accuracy was only **0.5%–43.2%** despite explicit textual descriptions
-- Fatal error rates (progression judged as stable) ranged from **10.6% to 18.3%**
-- **No model was uniformly superior** across all tasks
-- Medical-specialized models did **not** consistently outperform general-purpose models
+## Clinical Reference Standards
 
-## Benchmark Structure
+The benchmark was assembled at Peking University Cancer Hospital, a national-level tertiary oncology institution. Reports and benchmark reference answers were generated within the hospital's clinical workflow and underwent 2-radiologist verification or a documented second audit. The benchmark contains 800 longitudinal change-assessment pairs, 1,095 structured extraction/staging reports, and 100 impression-generation cases. Pathology-linked TNM concordance was evaluated on 213 temporally aligned cases.
 
-| Task | N | Input | Output | Gold Standard |
-|------|---|-------|--------|---------------|
-| T1: Change Assessment | 800 | Paired findings (prior + current) | Change category + metastasis flag | Negation-aware extraction from radiologist descriptors |
-| T2/T3: Extraction & Staging | 1,095 | Single findings text | Structured JSON + cTNM | Pathology-confirmed pTNM (n=213 temporally aligned) |
-| T4: Impression Generation | 100 | Findings without impression | Free-text impression | Pathology + survival outcomes |
+Pathology-confirmed pTNM reflects the AJCC edition used during clinical care: AJCC 7 through December 2017 and AJCC 8 from January 2018 onward. No retrospective restaging was performed.
 
-## Quick Start
+## 0820 Headline Results
 
-```bash
-# 1. Run your model on the benchmark
-python examples/infer_example.py --endpoint nvidia --model your-model --out my_predictions.jsonl
+- T1 accuracy: 63.75%–77.625%; macro-F1: 0.526–0.658.
+- T1 progression recall: 50.96%–73.08%.
+- Progression-to-stable errors: 10.58%–18.27% of 104 progression cases.
+- Exact-match clinical-to-pathologic TNM concordance: 0.47%–25.82%.
+- Component concordance: T 0.47%–43.19%, N 4.69%–67.61%, M 0.94%–75.12%.
 
-# 2. Score your predictions
-python scorer/scorer.py --predictions my_predictions.jsonl --output my_results.json
+For metastasis-positive pairs, the reported endpoint is the proportion of dual-verified cases with documented new metastasis whose T1 longitudinal change label was not `progression`. This is an endpoint within the T1 task, not a separate binary metastasis-classification task.
 
-# 3. View results
-cat my_results.json
-```
+## Reproducibility Notes
 
-## Repository Contents
-
-```
-ThoracicOncoBench/
-├── README.md                           # This file
-├── data/
-│   ├── benchmark.jsonl                 # Full benchmark: 1,995 instances
-│   └── benchmark_sample_en.jsonl       # 15-case English-described sample
-├── scorer/
-│   └── scorer.py                       # Frozen evaluation script
-├── examples/
-│   └── infer_example.py                # Reference inference script (OpenAI-compatible API)
-├── results/
-│   ├── table1_overall_ranking.csv      # 15-model performance ranking
-│   ├── table2_t1_per_class.csv         # T1 per-class precision/recall
-│   ├── table3_t3_components.csv        # T3 T/N/M component accuracy
-│   ├── table4_t4_impression.csv        # T4 ROUGE-L and char-F1
-│   ├── table5_fatal_errors.csv         # Fatal error analysis
-│   └── tableA_confusion_matrices.json  # Full confusion matrices
-└── figures/
-    ├── figure1_study_design.png        # Study flow chart
-    ├── figure2_confusion_matrices.png   # T1 confusion matrices (4 models)
-    ├── figure3_tnm_bar.png             # TNM per-component grouped bar chart
-    ├── figure4_tradeoff_scatter.png     # Sensitivity-specificity scatter
-    └── figure5_fatal_bar.png           # Fatal error stacked bar chart
-```
-
-## Evaluated Models (15)
-
-| Category | Models |
-|----------|--------|
-| Frontier | GPT-5.4, Gemini-3.5-flash, Baichuan-M3 |
-| General | Nemotron-3-Ultra, Qwen3.5-397B, DiffusionGemma-26B, Step-3.7-flash, DeepSeek-V4, Minimax-M2.7 |
-| Medical-specialized | MedSeek, HuatuoGPT, AntAngelMed, MediPhi, MediX, QwQ-Med-3 |
-
-## Evaluation Metrics
-
-| Metric | Task | Description |
-|--------|------|-------------|
-| Macro-F1 | T1 | Macro-averaged F1 across 4 change categories |
-| Progression Recall | T1 | Fraction of true progressions correctly identified |
-| Fatal Error Rate | T1 | Fraction of progression cases judged "stable" (with 95% Wilson CI) |
-| Exact-Match | T3 | All three TNM components correct |
-| Per-Component Accuracy | T3 | Individual T, N, M accuracy vs pathology pTNM |
-| ROUGE-L F1 | T4 | Lexical similarity to radiologist impression |
-
-## Data Format
-
-Each benchmark instance is a JSON object. See `data/benchmark_sample_en.jsonl` for annotated examples with English task descriptions.
+All 15 models were evaluated once with temperature 0.6, top_p 0.95, prompt version `v1 (infer_v2.py)`, and API seeds not controlled. Parse failures and schema-invalid outputs were counted as incorrect in the primary intention-to-evaluate analysis.
 
 ## License
 
-MIT License. The benchmark data contains de-identified patient information. Users must comply with applicable data protection regulations.
-
-## Citation
-
-```
-[To be added upon publication]
-```
+See `LICENSE` for terms. Patient-level source data are not included in this public repository.

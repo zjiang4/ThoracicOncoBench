@@ -1,0 +1,16 @@
+﻿model,category,provider,api_model_id,api_base_url,run_date_start,run_date_end,n_runs,temperature,top_p,max_tokens,seed,prompt_version,n_instances_attempted,n_predictions_returned,n_parse_failures
+gpt-5.4,Frontier,gptnb (reseller),gpt-5.4,https://api.gptnb.ai/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,2500,not controlled (API),v1 (infer_v2.py),1995,1995,0
+Gemini-3.5,Frontier,gptnb (reseller),gemini-3.5-flash,https://api.gptnb.ai/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,2500,not controlled (API),v1 (infer_v2.py),1995,1995,215
+Baichuan-M3,Frontier,Baichuan AI,Baichuan-M3,https://api.baichuan-ai.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,0
+Nemotron-3,General,NVIDIA Integrate,nvidia/nemotron-3-ultra-550b-a55b,https://integrate.api.nvidia.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000*,not controlled (API),v1 (infer_v2.py),1995,1995,19
+Qwen3.5-397B,General,NVIDIA Integrate,qwen/qwen3.5-397b-a17b,https://integrate.api.nvidia.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000*,not controlled (API),v1 (infer_v2.py),1995,1995,94
+DiffusionGemma,General,NVIDIA Integrate,google/diffusiongemma-26b-a4b-it,https://integrate.api.nvidia.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,6
+Step-3.7,General,NVIDIA Integrate,stepfun-ai/step-3.7-flash,https://integrate.api.nvidia.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,0
+DeepSeek-V4,General,NVIDIA Integrate,deepseek-ai/deepseek-v4-flash,https://integrate.api.nvidia.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,187
+Minimax-M2.7,General,NVIDIA Integrate,minimaxai/minimax-m2.7,https://integrate.api.nvidia.com/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000*,not controlled (API),v1 (infer_v2.py),1995,1995,63
+MedSeek,Medical,Local LM Studio,hulu-med-flash-preview-27b,http://localhost:1234/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,2
+HuatuoGPT,Medical,Local LM Studio,[per-model config],http://localhost:1234/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,0
+AntAngelMed,Medical,Local LM Studio,[per-model config],http://localhost:1234/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,9
+MediPhi,Medical,Local LM Studio,[per-model config],http://localhost:1234/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,23
+MediX,Medical,Local LM Studio,[per-model config],http://localhost:1234/v1,2026-07 [see note],2026-07-23,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,5
+QwQ-Med-3,Medical,Local LM Studio,[per-model config],http://localhost:1234/v1,2026-07 [see note],2026-08-06,1,0.6,0.95,12000,not controlled (API),v1 (infer_v2.py),1995,1995,146
