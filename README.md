@@ -6,8 +6,8 @@ ThoracicOncoBench is a clinically anchored benchmark for evaluating large langua
 
 - `data/benchmark_sample_en.jsonl`: small English-format example for reproducing the input/output schema.
 - `scorer/scorer.py`: frozen scoring implementation used for the released benchmark outputs.
-- `results/`: aggregate model-level results for the 0820 analysis package.
-- `figures/`: five figures regenerated from the 0820 files with intention-to-evaluate scoring.
+- `results/`: aggregate model-level results released with the manuscript.
+- `figures/`: figures regenerated from the released result tables.
 - `docs/0820_reproducibility.md`: task definitions, reference-standard provenance, scoring rules, and limitations.
 - `examples/infer_example.py`: minimal inference example.
 
@@ -17,15 +17,15 @@ The complete manuscript is intentionally not stored in this repository. This rep
 
 The benchmark was assembled at Peking University Cancer Hospital, a national-level tertiary oncology institution. Reports and benchmark reference answers were generated within the hospital's clinical workflow and underwent 2-radiologist verification or a documented second audit. The benchmark contains 800 longitudinal change-assessment pairs, 1,095 structured extraction/staging reports, and 100 impression-generation cases. Pathology-linked TNM concordance was evaluated on 213 temporally aligned cases.
 
-Pathology-confirmed pTNM reflects the AJCC edition used during clinical care: AJCC 7 through December 2017 and AJCC 8 from January 2018 onward. No retrospective restaging was performed.
+Pathology-confirmed pTNM staging follows the AJCC 8th edition (2018).
 
-## 0820 Headline Results
+## Headline Results
 
-- T1 accuracy: 63.75%–77.625%; macro-F1: 0.526–0.658.
-- T1 progression recall: 50.96%–73.08%.
-- Progression-to-stable errors: 10.58%–18.27% of 104 progression cases.
-- Exact-match clinical-to-pathologic TNM concordance: 0.47%–25.82%.
-- Component concordance: T 0.47%–43.19%, N 4.69%–67.61%, M 0.94%–75.12%.
+- T1 accuracy: 63.8%–77.6%; macro-F1: 0.421–0.657.
+- T1 progression recall: 51.0%–73.1%.
+- Progression-to-stable errors: 10.6%–18.3% of 104 progression cases.
+- Exact-match clinical-to-pathologic TNM concordance: 0.5%–25.8%.
+- Component concordance: T 0.5%–43.2%, N 4.9%–69.9%, M 1.0%–79.6%.
 
 For metastasis-positive pairs, the reported endpoint is the proportion of dual-verified cases with documented new metastasis whose T1 longitudinal change label was not `progression`. This is an endpoint within the T1 task, not a separate binary metastasis-classification task.
 

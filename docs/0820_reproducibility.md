@@ -4,7 +4,7 @@
 
 - T1 longitudinal change assessment: 800 pairs from 605 patients; 104 progression cases; 22 pairs with dual-verified documented new metastasis.
 - T3 clinical-to-pathologic staging: 213 temporally aligned cases.
-- AJCC era: 98 cases in the AJCC 7 era (2017 or earlier) and 115 in the AJCC 8 era (2018 or later).
+- AJCC edition: all staging reference values follow the AJCC 8th edition (2018).
 
 ## Reference-standard provenance
 
