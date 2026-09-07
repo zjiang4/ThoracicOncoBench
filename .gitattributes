@@ -1,0 +1,9 @@
+# Preserve checksum-covered release artifacts byte-for-byte across platforms.
+*.html -text whitespace=cr-at-eol
+*.json -text whitespace=cr-at-eol
+*.jsonl -text whitespace=cr-at-eol
+*.sha256 -text whitespace=cr-at-eol
+
+# Keep pre-existing repository metadata unchanged.
+.gitignore -text whitespace=cr-at-eol
+LICENSE -text whitespace=cr-at-eol

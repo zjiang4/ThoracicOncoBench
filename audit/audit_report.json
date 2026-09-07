@@ -1,0 +1,230 @@
+{
+  "instances_audited": 1968,
+  "label_distribution": {
+    "stable": 1639,
+    "progression": 158,
+    "mixed": 23,
+    "regression": 148
+  },
+  "tier_distribution": {
+    "definitive": 1865,
+    "quantitative": 103
+  },
+  "met_positive": 78,
+  "met_positive_by_label": {
+    "progression": 59,
+    "mixed": 19
+  },
+  "primary_rule_distribution": {
+    "RECIST-SD-IMPRESSION": 1639,
+    "RECIST-PD-IMPRESSION": 102,
+    "RECIST-MIXED-IMPRESSION": 4,
+    "RECIST-PD-QUANTITATIVE": 56,
+    "RECIST-PR-QUANTITATIVE": 47,
+    "RECIST-PR-IMPRESSION": 101,
+    "RECIST-MIXED-DIRECTIONAL": 19
+  },
+  "findings_without_explicit_change_language": {
+    "count": 130,
+    "instance_ids": [
+      "inst_16a91fc7ab60c25e",
+      "inst_c8c260893a839074",
+      "inst_5d7d4afaaae81db2",
+      "inst_5c49e49b8efcb28e",
+      "inst_1997e69caa6d4127",
+      "inst_29f6e41545cbcb3d",
+      "inst_3563aa45864e2002",
+      "inst_9df4b2c025acf6f9",
+      "inst_5177e198abbb51f5",
+      "inst_25e1e0c93f9e485d",
+      "inst_fee1ddd780180a79",
+      "inst_aef9f0ec74e35bd4",
+      "inst_dd45a4fb6bf772f6",
+      "inst_2a8e24c6cdf1f7c6",
+      "inst_4abfe1cb4029da36",
+      "inst_6b667d63b4efa93a",
+      "inst_28a35d26c7ba8967",
+      "inst_42174f68f2904d5a",
+      "inst_d86d50fa68adab06",
+      "inst_d52606ee5a0094c5",
+      "inst_1828c9c7bc9bb9fa",
+      "inst_a445dc86536575f5",
+      "inst_8855db26fc287bd5",
+      "inst_d49a3b85a3612939",
+      "inst_5d403f31cf561394",
+      "inst_84143dad13100f8a",
+      "inst_de7fdc3748472286",
+      "inst_b6eb7953db548e22",
+      "inst_318486129ba924fa",
+      "inst_bc139fdc47fa553b",
+      "inst_d7233e8065157643",
+      "inst_43b9e83c4dd1b8da",
+      "inst_f65eb4952a553864",
+      "inst_943902c5877b5a6b",
+      "inst_7501d9534ce3ef1f",
+      "inst_7d48df59203e689f",
+      "inst_843c98174119a868",
+      "inst_593e1a7ac72b19d1",
+      "inst_993c7a5159915000",
+      "inst_62ee15f4e51ba912",
+      "inst_4b4e6ec275c0c107",
+      "inst_bd03e7d8b41744a7",
+      "inst_2b8c9b1ce1294d8b",
+      "inst_75fb1c732bbfddcf",
+      "inst_d024fd0751d9b8a9",
+      "inst_05d746cf54ebd47c",
+      "inst_d019dfd48c2165a6",
+      "inst_67ea75583cfae0aa",
+      "inst_144b846df8a9aa6f",
+      "inst_3a5d19b81971f78b"
+    ]
+  },
+  "single_lesion_threshold_vs_impression_concordance": {
+    "n_with_directional_quant_evidence": 217,
+    "n_impression_driven_definitive": 114,
+    "exact_agreement_with_label": 91,
+    "exact_agreement_rate": 0.7982456140350878,
+    "mixed_labels_among_them": 9,
+    "disagreement_examples": [
+      {
+        "instance_id": "inst_9df4b2c025acf6f9",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "纵隔4组淋巴结减小，原约8mm（IM26），现约5mm（IM26），双肺门未见确切肿大淋巴结"
+      },
+      {
+        "instance_id": "inst_4abfe1cb4029da36",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "左肺上叶尖后段结节略缩小，原约9x5mm（IM21），现约6x5mm（IM21），前段支气管血管束旁小结节大致同前，约5x4mm（IM23），肺气肿同前"
+      },
+      {
+        "instance_id": "inst_d0c310399e89003c",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "肺内散在微小结节部分缩小，如右肺下叶基底段者原约3mm（IM33），现约1mm（IM34），余肺多发微小结节同前（Im35-37、39、42、44等），右肺上叶钙化点同前，余肺未见新生灶"
+      },
+      {
+        "instance_id": "inst_144b846df8a9aa6f",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "原食道胸中段管壁增厚较前减轻，原较厚处约22mm，现约8mm（IMA18），周围脂肪间隙较前清楚，同胸主动脉接触面较前缩小"
+      },
+      {
+        "instance_id": "inst_9f7209ab8b841dc1",
+        "quant_direction": "regression",
+        "label": "mixed",
+        "sentence": "纵隔淋巴结较前缩小，较大者原约11x10mm（IM20），现约8x7mm（IM19），双侧肺门、腋窝及锁骨上平扫未见肿大淋巴结"
+      },
+      {
+        "instance_id": "inst_666bcc3c747c2c42",
+        "quant_direction": "regression",
+        "label": "mixed",
+        "sentence": "食管胸中下段管壁不均匀增厚较前减轻，较厚处原约24mm，现约14mm（Im28），外膜模糊，与胸主动脉壁接触面不足90度."
+      },
+      {
+        "instance_id": "inst_83822fec77bf17a8",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "纵隔6组小淋巴结缩小，原约5mm（IM10)，现约3mm（IM13）"
+      },
+      {
+        "instance_id": "inst_8bda17f2d502743b",
+        "quant_direction": "regression",
+        "label": "mixed",
+        "sentence": "右肺上叶后段软组织密度结节较前缩小，原约22x20mm（Im17），现约10x5mm（IM16），邻近可见少许索条影"
+      },
+      {
+        "instance_id": "inst_3adf44e83b7d5d30",
+        "quant_direction": "regression",
+        "label": "mixed",
+        "sentence": "左肺上叶下舌段支气管截断，局部软组织结节明显缩小，原约28x23mm，现短径约11mm（IM25），长径与肺不张无法区分，远端肺组织膨胀不全范围缩小"
+      },
+      {
+        "instance_id": "inst_606749b9481bdeb4",
+        "quant_direction": "progression",
+        "label": "mixed",
+        "sentence": "左肺门肿块较前增大，累及左肺动脉，整体大小现约44x38mm（IM22），原约25x22mm（IMA25）"
+      },
+      {
+        "instance_id": "inst_e547d7dcfc7f6ac2",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "右肺中叶切除术后，支气管断端软组织密度灶较前明显缩小，原约17x15mm（IM36），现约8x5mm（IM34），增强扫描未见明确强化"
+      },
+      {
+        "instance_id": "inst_9fca1e4aa46b24f1",
+        "quant_direction": "progression",
+        "label": "stable",
+        "sentence": "胸中下段食管壁不规则增厚，较前明显，管腔闭塞，如原约6mm（IM30），现约20x15mm（IM30），周围脂肪间隙密度减低，病变区与邻近胸主动脉接触面小于90度"
+      },
+      {
+        "instance_id": "inst_c5a5cffdbdc2dd5f",
+        "quant_direction": "regression",
+        "label": "stable",
+        "sentence": "食管胸中段管壁增厚减轻，原较厚处约9mm（IM34），现较厚处约6mm（IM36）"
+      },
+      {
+        "instance_id": "inst_64147ec9301ed287",
+        "quant_direction": "regression",
+        "label": "mixed",
+        "sentence": "纵隔、双肺门多发肿大淋巴结较前缩小，较大原约20*15mm（IMA32），现约16x7mm（IM31）"
+      },
+      {
+        "instance_id": "inst_05f3f21000da612f",
+        "quant_direction": "regression",
+        "label": "mixed",
+        "sentence": "食管胸中段管壁不均匀增厚较前减轻，较厚横截面径原约29x22mm，现较厚处约9mm（IM27），外膜模糊，同主动脉弓脂肪间隙部分消失，近端食管无扩张"
+      }
+    ],
+    "interpretation": "concordance between RECIST-informed single-lesion thresholds and the impression-driven label on instances carrying both; quantitative tier decides the label by construction, so only the definitive (impression-driven) subset is informative"
+  },
+  "multi_channel_convergence": {
+    "interpretation": "internal multi-channel corroboration: how many semi-independent evidence channels (dual-audited impression conclusion, RECIST-informed quantitative thresholds, findings directional language) concordantly support each primary label; machine-only substitute for inter-rater reliability reporting",
+    "channel_availability": {
+      "impression": 1870,
+      "findings_directional": 1827,
+      "quantitative": 217
+    },
+    "support_distribution": {
+      "1": 188,
+      "2": 1708,
+      "3": 72
+    },
+    "multi_channel_share": 0.9044715447154471,
+    "support_by_label": {
+      "stable": {
+        "2": 1524,
+        "1": 115
+      },
+      "progression": {
+        "3": 30,
+        "2": 85,
+        "1": 43
+      },
+      "mixed": {
+        "2": 20,
+        "1": 3
+      },
+      "regression": {
+        "1": 27,
+        "3": 42,
+        "2": 79
+      }
+    }
+  },
+  "checks": {},
+  "checks_passed": {},
+  "violations": {},
+  "adjudication": {
+    "sample_size": 332,
+    "design": "blinded, randomized order; 60 each progression/regression/mixed + 120 stable + all remaining metastasis-positive + up to 30 additional postoperative-flagged progression; seed 20260904",
+    "sample_flag_distribution": {
+      "postoperative_language": 233,
+      "met_suspicious": 19,
+      "findings_without_explicit_change_language": 14
+    },
+    "blinding": "Optional blinded adjudication artifacts were generated during audit but omitted from this clean release.",
+    "files": []
+  }
+}

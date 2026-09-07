@@ -1,0 +1,9 @@
+{
+  "patients": 9334,
+  "reports": 17535,
+  "translated_reports": 17535,
+  "translated_evidence_phrases": 11206,
+  "english_field_failures": [],
+  "english_field_failure_count": 0,
+  "missing_html_markers": []
+}

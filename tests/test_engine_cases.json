@@ -1,0 +1,198 @@
+{
+ "label_cases": [
+  {
+   "name": "inst_2dde5bb8c58a5cfc",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 1 右肺上叶术后，支气管断端未见异常软组织灶。双肺小结节灶同前相仿，较大约6mm（Im51）。右肺中叶索条影同前。双肺未见新增结节及片絮状病灶。\n 2 右侧胸膜略厚同前，双侧未见胸腔积液。\n 3 纵隔淋巴结同前。\n 4 右侧第5肋陈旧骨折同前，余扫及诸骨未见骨质破坏征象。",
+   "current_impression": "右上叶肺癌术后改变，胸部未见明确变化。",
+   "expect": {
+    "change": "stable",
+    "new_metastatic_disease": false,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_3f911f25ef347c86",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸CT比较：\n 右乳术后改变，局部未见软组织肿块。\n 右肺中上叶体积缩小，其内支气管扩张伴斑片及网状影同前，余肺野未见新发结节及片絮灶。\n 双肺门多发增大淋巴结大致同前，较大约15x10mm（IM28）。纵隔散在小淋巴结同前。\n 双侧未见胸腔积液。\n 扫及诸骨未见骨质破坏征象。",
+   "current_impression": "右乳术后改变同前。\n右肺中上叶支扩、肺组织膨胀不全同前。\n纵隔、双肺门多发淋巴结同前。",
+   "expect": {
+    "change": "stable",
+    "new_metastatic_disease": false,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_99fc389cc7b6d157",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 左肺上叶术后，支气管断端未见异常强化影。双侧胸腔未见积液，左侧胸膜结节样增厚同前（IMA30）。\n 右肺上叶及两下肺点状模糊微小结节灶同前（IM16、37），较大者约3mm。左肺索条影同前，余双肺未见新发结节。\n 纵隔、双肺门及双侧腋窝未见肿大淋巴结。\n 左侧第4肋骨术后改变同前，T10椎体高密度结节基本同前。\n 左上腹皮下小结节灶同前，大小约10*7mm（IMA52）。\n 扫及肝内多发低密度灶灶。",
+   "current_impression": "左肺上叶术后改变。\n双肺多发结节大致同前，追查。\n肝多发低密度影，请结合腹部检查。",
+   "expect": {
+    "change": "stable",
+    "new_metastatic_disease": false,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_4002e712ad9903f1",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT相比：\n 左肺下叶外基底段胸膜下小结节同前，大小仍约4mm（IM44）。双肺下叶胸膜下不规则小结节部分同前，部分似略缩小（IM34、40、47）。右肺索条同前，余肺未见新生结节或实变影。\n 纵隔、双肺门、锁骨上区及双腋下平扫未见明显肿大淋巴结。\n 双侧未见胸水征象。\n 胸廓诸骨未见明确破坏征象。",
+   "current_impression": "双肺小结节大致同前，倾向陈旧灶。",
+   "expect": {
+    "change": "stable",
+    "new_metastatic_disease": false,
+    "evidence_tier": "suspicious",
+    "primary_eligible": false
+   }
+  },
+  {
+   "name": "inst_4c126ddd3a886ec8",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 1、右肺下叶病灶切除术后，局部索条及小结节影同前，约5mm（IM42）。右肺下叶近膈处新见模糊小结节，较大约6mm（IM52）。左肺下叶病灶切除术后，局部缝线影周围见少许软组织密度影包裹同前（IM47）。\n 2、左侧胸膜及叶间胸膜较前增厚，见多发结节，较厚处原约3mm（IM33），现约7mm（IM33）。双侧未见胸水征象。\n 3、纵隔、双肺门、锁骨上区及双腋下平扫未见明显肿大淋巴结。\n 4、扫及诸骨未见明确破坏征象。 \n 5、甲状腺左叶内钙化灶同前。",
+   "current_impression": "双肺下叶术后改变。\n左侧胸膜及叶间胸膜改变，倾向转移。\n右肺下叶新发小结节，转移与炎性待鉴别，密切追查。",
+   "expect": {
+    "change": "indeterminate",
+    "new_metastatic_disease": false,
+    "evidence_tier": "indeterminate",
+    "primary_eligible": false
+   }
+  },
+  {
+   "name": "inst_e6b42d758f186676",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 1、左肺全切除术后，左侧胸腔缩小及纵隔左移同前，少量积液同前相仿。右肺下叶基底段多发片状影，较前范围增大，较大者现约22x15mm（IM54），原约10x10mm（IM56）；右肺中叶结节较前增大，现约19x12mm（IM40），原约12x6mm（IM42），胸膜牵拉内陷。\n 2、纵隔2、4组小淋巴结同前，4R组仍约14x8mm（IM19）；余纵隔未见肿大淋巴结。\n 3、右侧胸膜光滑，未见胸水。\n 4、左侧肋骨术后改变同前同前。余扫及诸骨未见破坏灶。",
+   "current_impression": "左肺全切术后改变。\n右肺中、下叶结节及斑片灶较前增大，考虑转移。",
+   "expect": {
+    "change": "progression",
+    "new_metastatic_disease": true,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_5b3acbb170f00b8b",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 1、左肺术后，纵隔左移同前，支气管断端未见结节及肿块影。左肺下叶结节较前增多、增大，现较大约17x16mm（IM41）,右肺上叶条索状影大致同前（IM17)。\n 2、双侧胸膜增厚同前，未见胸水。\n 3、纵隔、锁骨上平扫未见肿大淋巴结。\n 4、胸椎椎体多发低密度区较前相仿。",
+   "current_impression": "左肺术后改变。\n左肺下叶多发转移，较前进展。\n胸椎体多发低密度区同前，性质待定，请结合骨扫描并追查。",
+   "expect": {
+    "change": "progression",
+    "new_metastatic_disease": true,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_2ac77658dc4577c6",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 1、左肺术后，纵隔左移同前，支气管断端未见结节及肿块影。左肺下叶结节部分较前增多、增大，如左下肺新发结节约11x9mm（Im34）；部分同前，如较大现约17x15mm（IM40）；右肺上叶条索状影及结节灶大致同前（IM19)。\n 2、双侧胸膜增厚同前，未见胸水。\n 3、纵隔、锁骨上平扫未见肿大淋巴结。\n 4、胸椎椎体多发低密度区较前相仿。",
+   "current_impression": "左肺术后改变。\n左肺下叶多发转移部分较前进展。\n胸椎体多发低密度区同前，性质待定，请结合骨扫描并追查。",
+   "expect": {
+    "change": "progression",
+    "new_metastatic_disease": true,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_68d79c1a17ed6f9d",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT对比：\n 食管胸中下段交界区管壁增厚较前加重，管壁较大横断面径线现约53x31mm（IM32），原约42x30mm，明显强化不均，管腔狭窄。\n 双肺支气管通畅，肺内透亮度均匀，左下肺见少许索条影，双肺未见结节灶或斑片影。\n 纵隔内散在数枚小淋巴结同前。右肺门区新见淋巴结约20x10mm（Im30），左肺门、双侧腋窝及锁骨上未见肿大淋巴结。\n 双侧胸膜光滑，未见胸水征象。\n 胸椎多个椎体骨质增生同前。扫及胸廓诸骨未见骨质破坏征象。\n 扫及甲状腺双侧叶下极低密度灶及钙化灶同前。",
+   "current_impression": "食管癌复查，壁厚较前加重。\n右肺门区肿大淋巴结考虑转移可能大。",
+   "expect": {
+    "change": "progression",
+    "new_metastatic_disease": false,
+    "evidence_tier": "definitive",
+    "primary_eligible": true
+   }
+  },
+  {
+   "name": "inst_b0191892c7d60f6f",
+   "note": "v0.1 known-issue case; expected behavior locked by v0.2.0 protocol",
+   "current_findings": "与[DATE]胸部CT比较：\n 左肺上叶磨玻璃结节同前相仿，现约9mm（IM23），原约8mm(IM28)；余双肺未新增结节及实变影。\n 纵隔、双肺门、锁骨上区及双腋下未见肿大淋巴结。\n 双侧未见胸水征象。\n 扫及胸廓诸骨未见明确破坏征象。",
+   "current_impression": "左肺上叶磨玻璃结节较前相仿，恶性不除外，追查或活组织检查。",
+   "expect": {
+    "change": "stable",
+    "new_metastatic_disease": false,
+    "evidence_tier": "suspicious",
+    "primary_eligible": false
+   }
+  }
+ ],
+ "measurement_cases": [
+  {
+   "sentence": "右肺上叶结节较前缩小，现约4x2mm（IM28），原约9x9mm（IM27）",
+   "direction": "regression",
+   "prior": 9.0,
+   "current": 4.0
+  },
+  {
+   "sentence": "双肺结节影部分较前增大，现较大约40x29mm（IM36），原较大约21x18mm（Im36）",
+   "direction": "progression",
+   "prior": 21.0,
+   "current": 40.0
+  },
+  {
+   "sentence": "纵隔及左肺门多发肿大淋巴结较前增大，大者原约36x25mm（IM38），现约50x33mm（IM37）",
+   "direction": "progression",
+    "prior": 25.0,
+    "current": 33.0
+  },
+  {
+   "sentence": "左肺上叶病灶较前明显增大，原大小约24x23mm，现约41*31mm（IM21）",
+   "direction": "progression",
+   "prior": 24.0,
+   "current": 41.0
+  },
+  {
+   "sentence": "右肺上叶肿块较前缩小，现约34x28mm（IM17），原为50x46mm（IM17）",
+   "direction": "regression",
+   "prior": 50.0,
+   "current": 34.0
+  },
+  {
+   "sentence": "甲状腺左侧叶体积增大，低密度结节较前缩小，现约5mm（IMA9），原约16x16mm（IM8）",
+   "direction": "regression",
+   "prior": 16.0,
+   "current": 5.0
+  },
+  {
+   "sentence": "纵隔4L淋巴结较前略增大，现约13*11mm(图20)，原约10*10mm(图20)",
+    "direction": "below_threshold_change",
+    "prior": 10.0,
+    "current": 11.0
+  },
+  {
+   "sentence": "左肺上叶结节较前增大，原约13x11mm（IM13），现约15x13mm（IM14）",
+   "direction": "below_threshold_change",
+   "prior": 13.0,
+   "current": 15.0
+  },
+  {
+   "sentence": "由约10mm增大至15mm",
+   "direction": "progression",
+   "prior": 10.0,
+   "current": 15.0
+  },
+  {
+   "sentence": "双肺小结节灶同前相仿，较大约6mm（Im51）",
+   "direction": null,
+   "prior": null,
+   "current": null
+  },
+  {
+   "sentence": "部分淋巴结肿大，原小于6mm，现较大约22x14mm（IM13）",
+   "direction": "progression",
+    "prior": 6.0,
+    "current": 14.0
+  },
+  {
+   "sentence": "吻合口右侧旁淋巴结较前缩小，原约16x13mm，现约12x9mm（IM10）",
+    "direction": "regression",
+    "prior": 13.0,
+    "current": 9.0
+  }
+ ]
+}

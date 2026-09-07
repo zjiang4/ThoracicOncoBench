@@ -1,1 +1,0 @@
-These are a preliminary 0820 rescoring snapshot (macro-F1 0.526-0.658) that was NOT used in the manuscript. The manuscript reports the frozen analysis in the parent directory (macro-F1 0.421-0.657). Retained for audit trail only.

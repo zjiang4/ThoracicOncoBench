@@ -1,0 +1,128 @@
+{
+  "builder_version": "v0.4.0",
+  "parser_version": "v0.4.0",
+  "created_at": "2026-09-05T06:01:24Z",
+  "input_variant": "findings_only_v1",
+  "input_variant_note": "Model input contains findings sections only; the dual-audited impression is reserved as the reference-standard source and must not be fed to evaluated models.",
+  "clinical_basis": [
+    "RECIST 1.1 (Eisenhauer et al., Eur J Cancer 2009)",
+    "iRECIST (Seymour et al., Lancet Oncol 2017)",
+    "Institutional dual-audit reporting workflow (impression priority)",
+    "Oncologic-scope gate for malignant disease burden"
+  ],
+  "consistency_constraints": [
+    "new_metastatic_disease=true requires label in {progression, mixed}",
+    "stable impression plus explicit oncologic findings change is labeled indeterminate/conflict",
+    "non-oncologic changes cannot independently define progression/regression",
+    "definitive new-metastasis evidence vs stable impression => indeterminate (excluded from primary)"
+  ],
+  "longitudinal_change": {
+    "total_instances": 8011,
+    "dropped_nonpositive_interval_pairs": 190,
+    "task_counts": {
+      "longitudinal_change_secondary": 4744,
+      "longitudinal_change_primary": 1968,
+      "longitudinal_change_indeterminate": 1299
+    },
+    "evidence_tier_counts": {
+      "directional": 4369,
+      "definitive": 1869,
+      "suspicious": 371,
+      "indeterminate": 1299,
+      "quantitative": 103
+    },
+    "label_counts_all": {
+      "stable": 5854,
+      "progression": 496,
+      "indeterminate": 1299,
+      "mixed": 35,
+      "regression": 327
+    },
+    "primary_instances": 1968,
+    "primary_label_counts": {
+      "stable": 1639,
+      "progression": 158,
+      "mixed": 23,
+      "regression": 148
+    },
+    "primary_split_counts": {
+      "train": 1323,
+      "validation": 325,
+      "test": 320
+    },
+    "primary_metastasis_positive": {
+      "false": 1890,
+      "true": 78
+    },
+    "split_counts": {
+      "train": 5595,
+      "validation": 1220,
+      "test": 1196
+    },
+    "primary_rule_counts": {
+      "RECIST-SD-DIRECTIONAL": 4061,
+      "RECIST-SD-IMPRESSION": 1643,
+      "QUALITY-UNCERTAINTY-DOWNGRADE": 371,
+      "QUALITY-INDETERMINATE": 1169,
+      "QUALITY-INDETERMINATE-CONFLICT": 130,
+      "RECIST-PD-IMPRESSION": 102,
+      "RECIST-MIXED-IMPRESSION": 4,
+      "RECIST-MIXED-DIRECTIONAL": 31,
+      "RECIST-PR-DIRECTIONAL": 176,
+      "RECIST-PD-DIRECTIONAL": 110,
+      "RECIST-PD-QUANTITATIVE": 56,
+      "RECIST-PR-QUANTITATIVE": 47,
+      "RECIST-PR-IMPRESSION": 101,
+      "RECIST-PD-NEW-LESION": 10
+    },
+    "protocol_rule_counts": {
+      "RECIST-SD-DIRECTIONAL": 4061,
+      "QUALITY-EXPLICIT-COMPARISON": 7933,
+      "QUALITY-POSTOP-INFLAMMATORY-FLAG": 6684,
+      "QUALITY-ONCOLOGIC-SCOPE": 7999,
+      "QUALITY-IMPRESSION-PRIORITY": 1993,
+      "QUALITY-IMPRESSION-SUPPORTED": 1993,
+      "RECIST-SD-IMPRESSION": 1643,
+      "QUALITY-NONONCOLOGIC-DOWNGRADE": 1385,
+      "QUALITY-UNCERTAINTY-DOWNGRADE": 371,
+      "MEASUREMENT-BELOW-RECIST-INFORMED-THRESHOLD": 802,
+      "QUALITY-INDETERMINATE": 1169,
+      "RECIST-PD-QUANTITATIVE-SUPPORT": 410,
+      "QUALITY-INDETERMINATE-CONFLICT": 130,
+      "RECIST-PD-IMPRESSION": 102,
+      "RECIST-MIXED-IMPRESSION": 4,
+      "RECIST-MIXED-DIRECTIONAL": 31,
+      "RECIST-PR-DIRECTIONAL": 176,
+      "RECIST-PD-DIRECTIONAL": 110,
+      "RECIST-PD-QUANTITATIVE": 56,
+      "RECIST-PR-QUANTITATIVE": 47,
+      "RECIST-PR-IMPRESSION": 101,
+      "RECIST-PD-NEW-LESION": 10,
+      "QUALITY-CONSISTENCY-MET-PROGRESSION": 30
+    },
+    "measurement_evidence_count": 1101,
+    "primary_measurement_evidence_count": 352
+  },
+  "impression_generation": {
+    "total_instances": 11999,
+    "split_counts": {
+      "validation": 1908,
+      "train": 8302,
+      "test": 1789
+    }
+  },
+  "source": {
+    "report_count": 17535,
+    "patient_count": 9334,
+    "reports_with_impression": 11999,
+    "reports_with_explicit_comparison": 11660
+  },
+  "split_method": "deterministic md5(patient_id) mod 100: <70 train, <85 validation, else test",
+  "release_notes": [
+    "Labels are impression-priority, RECIST 1.1-informed, protocol-concordant report-derived labels, not image-level gold standards.",
+    "v0.4.0 adds cm/厘米 normalization, stable-impression conflict quarantine, and conservative handling of generic new nodules and slight/follow-up-qualified changes; v0.3.0 safeguards remain active.",
+    "Model input is findings-only; impressions are reserved as the reference source.",
+    "Patient and report identifiers are hashed; absolute dates in report text are redacted.",
+    "Set THORACIC_BENCH_SALT to a private value before creating a public release build."
+  ]
+}

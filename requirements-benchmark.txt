@@ -1,0 +1,2 @@
+ThoracicOncoBench benchmark tooling uses the Python 3.10+ standard library only.
+No third-party packages are required to rebuild, evaluate, or audit the benchmark.

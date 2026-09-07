@@ -1,0 +1,25 @@
+{
+  "suite": "perturbation fidelity v0.2.2",
+  "purpose": "machine-only differential-validity testing: transformed real sentences must change engine output in the direction prescribed by RECIST 1.1 (negated new lesion/enlargement is not progression) and iRECIST (hedged statements are not unequivocal progression)",
+  "tests": {
+    "T1_negation_insertion_before_progression_verb": {
+      "n": 20
+    },
+    "T2_hard_uncertainty_downgrades_progression": {
+      "n": 20
+    },
+    "T3_bare_adjective_without_compare_marker_does_not_trigger": {
+      "n": 20
+    },
+    "T4_prior_current_marker_swap_flips_direction": {
+      "n": 20
+    },
+    "T6_hedged_metastasis_loses_definitive_status": {
+      "n": 20
+    }
+  },
+  "total_checks": 100,
+  "failures": [],
+  "pass_rate": 1.0,
+  "seed": 20260904
+}

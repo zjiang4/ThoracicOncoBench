@@ -1,0 +1,110 @@
+{
+  "parser_version": "v0.4.0",
+  "label_counts_by_evidence_tier": {
+    "definitive": {
+      "stable": 1643,
+      "progression": 102,
+      "mixed": 23,
+      "regression": 101
+    },
+    "directional": {
+      "stable": 4061,
+      "mixed": 12,
+      "regression": 176,
+      "progression": 120
+    },
+    "indeterminate": {
+      "indeterminate": 1299
+    },
+    "quantitative": {
+      "progression": 56,
+      "regression": 47
+    },
+    "suspicious": {
+      "stable": 150,
+      "progression": 218,
+      "regression": 3
+    }
+  },
+  "primary_rule_counts_by_label": {
+    "indeterminate": {
+      "QUALITY-INDETERMINATE": 1169,
+      "QUALITY-INDETERMINATE-CONFLICT": 130
+    },
+    "mixed": {
+      "RECIST-MIXED-IMPRESSION": 4,
+      "RECIST-MIXED-DIRECTIONAL": 31
+    },
+    "progression": {
+      "QUALITY-UNCERTAINTY-DOWNGRADE": 218,
+      "RECIST-PD-IMPRESSION": 102,
+      "RECIST-PD-DIRECTIONAL": 110,
+      "RECIST-PD-QUANTITATIVE": 56,
+      "RECIST-PD-NEW-LESION": 10
+    },
+    "regression": {
+      "RECIST-PR-DIRECTIONAL": 176,
+      "RECIST-PR-QUANTITATIVE": 47,
+      "RECIST-PR-IMPRESSION": 101,
+      "QUALITY-UNCERTAINTY-DOWNGRADE": 3
+    },
+    "stable": {
+      "RECIST-SD-DIRECTIONAL": 4061,
+      "RECIST-SD-IMPRESSION": 1643,
+      "QUALITY-UNCERTAINTY-DOWNGRADE": 150
+    }
+  },
+  "primary_rule_counts_by_task": {
+    "longitudinal_change_indeterminate": {
+      "QUALITY-INDETERMINATE": 1169,
+      "QUALITY-INDETERMINATE-CONFLICT": 130
+    },
+    "longitudinal_change_primary": {
+      "RECIST-SD-IMPRESSION": 1639,
+      "RECIST-PD-IMPRESSION": 102,
+      "RECIST-MIXED-IMPRESSION": 4,
+      "RECIST-PD-QUANTITATIVE": 56,
+      "RECIST-PR-QUANTITATIVE": 47,
+      "RECIST-PR-IMPRESSION": 101,
+      "RECIST-MIXED-DIRECTIONAL": 19
+    },
+    "longitudinal_change_secondary": {
+      "RECIST-SD-DIRECTIONAL": 4061,
+      "QUALITY-UNCERTAINTY-DOWNGRADE": 371,
+      "RECIST-MIXED-DIRECTIONAL": 12,
+      "RECIST-PR-DIRECTIONAL": 176,
+      "RECIST-PD-DIRECTIONAL": 110,
+      "RECIST-PD-NEW-LESION": 10,
+      "RECIST-SD-IMPRESSION": 4
+    }
+  },
+  "protocol_rules": {
+    "RECIST-PD-IMPRESSION": "Dual-audited final impression explicitly concludes progression, recurrence, or worsening.",
+    "RECIST-PD-NEW-LESION": "New oncologic lesion or new metastatic disease documented (RECIST 1.1: new lesion defines progressive disease).",
+    "RECIST-PD-QUANTITATIVE": "Paired lesion measurements meet RECIST-informed progression threshold (>=20% and >=5 mm increase).",
+    "RECIST-PD-QUANTITATIVE-SUPPORT": "Report-level supportive measurement signal; not a full RECIST sum-of-diameters assessment.",
+    "RECIST-PD-DIRECTIONAL": "Findings document explicit comparative worsening language (e.g., 较前增大/增多).",
+    "RECIST-PR-IMPRESSION": "Dual-audited final impression explicitly concludes improvement, response, or regression.",
+    "RECIST-PR-QUANTITATIVE": "Paired lesion measurements meet RECIST-informed regression threshold (>=30% decrease).",
+    "RECIST-PR-DIRECTIONAL": "Findings document explicit comparative improvement language (e.g., 较前缩小/吸收).",
+    "RECIST-SD-IMPRESSION": "Dual-audited final impression explicitly concludes no meaningful change.",
+    "RECIST-SD-DIRECTIONAL": "Findings explicitly document no meaningful change or explicitly negated progression.",
+    "RECIST-MIXED-IMPRESSION": "Dual-audited final impression documents concurrent worsening and improvement.",
+    "RECIST-MIXED-DIRECTIONAL": "Findings document concurrent worsening and improvement across disease sites.",
+    "MEASUREMENT-BELOW-RECIST-INFORMED-THRESHOLD": "Paired measurements extracted but change does not meet RECIST-informed thresholds.",
+    "QUALITY-EXPLICIT-COMPARISON": "Primary labels require explicit comparison language in findings or impression.",
+    "QUALITY-IMPRESSION-PRIORITY": "The dual-audited impression is the primary synthesis; explicit disease-relevant conflict with a stable impression is quarantined as indeterminate.",
+    "QUALITY-IMPRESSION-SUPPORTED": "Primary labels are supported by the dual-audited final impression.",
+    "QUALITY-UNCERTAINTY-DOWNGRADE": "Hedged or equivocal statements (iRECIST: not unequivocal) are downgraded out of the primary set.",
+    "QUALITY-POSTOP-INFLAMMATORY-FLAG": "Postoperative or inflammatory co-text downgrades findings-level progression evidence.",
+    "QUALITY-ONCOLOGIC-SCOPE": "Progression/regression evidence must refer to malignant disease burden, not a non-oncologic complication.",
+    "QUALITY-NONONCOLOGIC-DOWNGRADE": "Effusion, pneumothorax, atelectasis, infection, fibrosis, and postoperative change are not tumor progression endpoints.",
+    "QUALITY-CONSISTENCY-MET-PROGRESSION": "New metastatic disease must be labeled progression or mixed, never stable or regression.",
+    "QUALITY-INDETERMINATE": "Insufficient, conflicting, or negated-only evidence.",
+    "QUALITY-INDETERMINATE-CONFLICT": "Definitive new-metastasis evidence conflicts with a stable impression conclusion."
+  },
+  "metastasis_positive_primary": {
+    "false": 1890,
+    "true": 78
+  }
+}
